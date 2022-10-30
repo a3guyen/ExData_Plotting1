@@ -37,8 +37,8 @@ plot(df$datetime,df$Global_active_power, type="l", ylab = "Global Active Power (
 plot(df$datetime,df$Voltage, type="l", ylab = "Voltage", xlab = "datetime")
 with(df, {
   plot(datetime,Sub_metering_1,  ylab = "Energy sub metering", xlab = "", type = "l", col = "black")
-  points(datetime,Sub_metering_2,   type = "l", col = "red")
-  points(datetime,Sub_metering_3,   type = "l", col = "blue")
+  lines(datetime,Sub_metering_2,  col = "red")
+  lines(datetime,Sub_metering_3,   col = "blue")
   legend("topright", pch = 151, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"))
 })
 plot(df$datetime,df$Global_reactive_power, type = "l")
